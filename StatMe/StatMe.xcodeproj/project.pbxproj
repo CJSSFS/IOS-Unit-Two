@@ -14,6 +14,8 @@
 		231E13012289A5EA00E7C6AF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 231E12FF2289A5EA00E7C6AF /* LaunchScreen.storyboard */; };
 		231E130C2289A5EB00E7C6AF /* StatMeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231E130B2289A5EB00E7C6AF /* StatMeTests.swift */; };
 		231E13172289A5EB00E7C6AF /* StatMeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231E13162289A5EB00E7C6AF /* StatMeUITests.swift */; };
+		23705D37228DD88C0044BC91 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23705D36228DD88C0044BC91 /* Player.swift */; };
+		23705D39228DDA290044BC91 /* PlayerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23705D38228DDA290044BC91 /* PlayerTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		231E13122289A5EB00E7C6AF /* StatMeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StatMeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		231E13162289A5EB00E7C6AF /* StatMeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatMeUITests.swift; sourceTree = "<group>"; };
 		231E13182289A5EB00E7C6AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		23705D36228DD88C0044BC91 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		23705D38228DDA290044BC91 /* PlayerTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +104,8 @@
 				231E12F62289A5E900E7C6AF /* AppDelegate.swift */,
 				231E12F82289A5E900E7C6AF /* ViewController.swift */,
 				231E12FA2289A5E900E7C6AF /* Main.storyboard */,
+				23705D38228DDA290044BC91 /* PlayerTableViewController.swift */,
+				23705D36228DD88C0044BC91 /* Player.swift */,
 				231E12FD2289A5EA00E7C6AF /* Assets.xcassets */,
 				231E12FF2289A5EA00E7C6AF /* LaunchScreen.storyboard */,
 				231E13022289A5EA00E7C6AF /* Info.plist */,
@@ -256,7 +262,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23705D37228DD88C0044BC91 /* Player.swift in Sources */,
 				231E12F92289A5E900E7C6AF /* ViewController.swift in Sources */,
+				23705D39228DDA290044BC91 /* PlayerTableViewController.swift in Sources */,
 				231E12F72289A5E900E7C6AF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -433,6 +441,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = W3NA95DNMR;
 				INFOPLIST_FILE = StatMe/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -450,6 +459,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = W3NA95DNMR;
 				INFOPLIST_FILE = StatMe/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
