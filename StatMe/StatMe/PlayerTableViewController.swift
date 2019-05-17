@@ -9,7 +9,8 @@
 import UIKit
 
 class PlayerTableViewController: UITableViewController {
-    var players = [Player(name: "Chad Scott Jr", number:2, shotsmade:14, shotsattempted:18, name: "Ben Uzzell", number: 10, shotsmade: 12, shotsattempted: 17)]
+    var players = [Player(name: "Chad Scott Jr", number:2, shotsmade:14, shotsattempted:18), Player(name: "Ben Uzzell", number: 10, shotsmade: 12, shotsattempted: 17), Player(name: "Cheick Toure", number: 5, shotsmade: 16, shotsattempted: 24), Player(name: "Brian Chisolm", number: 12, shotsmade: 5, shotsattempted: 8), Player(name: "Christian McDaniel", number:35, shotsmade: 13, shotsattempted: 19) ]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -24,23 +25,24 @@ class PlayerTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return players.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
 
         // Configure the cell...
-
+        
+        cell.textLabel.text = "test"
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.
