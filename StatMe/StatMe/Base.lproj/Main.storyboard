@@ -18,18 +18,49 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Roster Count" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yWd-B7-hKg">
-                                <rect key="frame" x="139" y="174" width="106" height="30"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tab-r2-JWB">
+                                <rect key="frame" x="8" y="211.5" width="359" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="LvZ-WG-xtv">
-                                <rect key="frame" x="93" y="645" width="198" height="2"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </progressView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5KH-TY-h6J">
-                                <rect key="frame" x="313" y="588" width="46" height="46"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Enter your team name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SZ5-39-ivv">
+                                <rect key="frame" x="21" y="182.5" width="168" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Sport" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zeL-3G-De6">
+                                <rect key="frame" x="16" y="376.5" width="343" height="45.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="38"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WRW-6Q-PbY">
+                                <rect key="frame" x="0.0" y="430" width="375" height="216"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="uEy-1C-z2w"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="JYB-tH-1pV"/>
+                                </connections>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Tab-r2-JWB" firstAttribute="top" secondItem="SZ5-39-ivv" secondAttribute="bottom" constant="8" id="8fx-Rb-8w3"/>
+                            <constraint firstItem="WRW-6Q-PbY" firstAttribute="top" secondItem="zeL-3G-De6" secondAttribute="bottom" constant="8" id="LE5-lD-fq1"/>
+                            <constraint firstItem="Tab-r2-JWB" firstAttribute="leading" secondItem="ct2-8i-Lvv" secondAttribute="leading" constant="8" id="Q5N-49-4bo"/>
+                            <constraint firstItem="zeL-3G-De6" firstAttribute="top" secondItem="Tab-r2-JWB" secondAttribute="bottom" constant="135" id="Urw-p1-avi"/>
+                            <constraint firstItem="WRW-6Q-PbY" firstAttribute="trailing" secondItem="ct2-8i-Lvv" secondAttribute="trailing" id="aqN-vm-Qer"/>
+                            <constraint firstItem="ct2-8i-Lvv" firstAttribute="bottom" secondItem="WRW-6Q-PbY" secondAttribute="bottom" constant="21" id="k8F-Px-asa"/>
+                            <constraint firstItem="ct2-8i-Lvv" firstAttribute="trailing" secondItem="Tab-r2-JWB" secondAttribute="trailing" constant="8" id="uK8-tJ-0xN"/>
+                            <constraint firstItem="WRW-6Q-PbY" firstAttribute="leading" secondItem="ct2-8i-Lvv" secondAttribute="leading" id="xSp-9E-e1N"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ct2-8i-Lvv"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="tU7-n8-ALC">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="DdN-YY-dHW">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="5KH-TY-h6J">
+                                <rect key="frame" x="313" y="0.0" width="46" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <state key="normal" title="Next &gt;"/>
@@ -37,57 +68,19 @@
                                     <segue destination="YR2-U5-0tW" kind="show" id="nf7-jW-kxY"/>
                                 </connections>
                             </button>
-                            <pickerView contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WRW-6Q-PbY">
-                                <rect key="frame" x="0.0" y="351" width="375" height="216"/>
-                                <connections>
-                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="uEy-1C-z2w"/>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="JYB-tH-1pV"/>
-                                </connections>
-                            </pickerView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zeL-3G-De6">
-                                <rect key="frame" x="21" y="300" width="343" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Enter Your Team Name" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rKX-Mx-YCB">
-                                <rect key="frame" x="103" y="105" width="169" height="30"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                        </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="zeL-3G-De6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2Oh-SL-4sV"/>
-                            <constraint firstItem="rKX-Mx-YCB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2YB-HL-2Zj"/>
-                            <constraint firstItem="ct2-8i-Lvv" firstAttribute="trailing" secondItem="rKX-Mx-YCB" secondAttribute="trailing" constant="103" id="E0l-zy-v7S"/>
-                            <constraint firstItem="zeL-3G-De6" firstAttribute="top" secondItem="yWd-B7-hKg" secondAttribute="bottom" constant="96" id="HVK-wy-Q5W"/>
-                            <constraint firstItem="WRW-6Q-PbY" firstAttribute="top" secondItem="zeL-3G-De6" secondAttribute="bottom" constant="30" id="JWc-tb-CBZ"/>
-                            <constraint firstItem="yWd-B7-hKg" firstAttribute="top" secondItem="rKX-Mx-YCB" secondAttribute="bottom" constant="39" id="KIE-BD-Mok"/>
-                            <constraint firstItem="yWd-B7-hKg" firstAttribute="leading" secondItem="ct2-8i-Lvv" secondAttribute="leading" constant="139" id="T2r-VF-htA"/>
-                            <constraint firstItem="rKX-Mx-YCB" firstAttribute="leading" secondItem="ct2-8i-Lvv" secondAttribute="leading" constant="103" id="bst-kK-PXj"/>
-                            <constraint firstItem="ct2-8i-Lvv" firstAttribute="trailing" secondItem="zeL-3G-De6" secondAttribute="trailing" constant="11" id="rEo-2M-oIA"/>
-                            <constraint firstItem="rKX-Mx-YCB" firstAttribute="top" secondItem="ct2-8i-Lvv" secondAttribute="top" constant="41" id="rud-QE-Xev"/>
-                            <constraint firstItem="yWd-B7-hKg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="t7j-7H-slb"/>
-                            <constraint firstItem="zeL-3G-De6" firstAttribute="leading" secondItem="ct2-8i-Lvv" secondAttribute="leading" constant="21" id="tRk-4j-fqp"/>
-                            <constraint firstItem="ct2-8i-Lvv" firstAttribute="trailing" secondItem="yWd-B7-hKg" secondAttribute="trailing" constant="130" id="w8I-rj-nyQ"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="ct2-8i-Lvv"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="tU7-n8-ALC">
-                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="vbd-NV-gOo"/>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="SportLabel" destination="zeL-3G-De6" id="WG1-9D-P2T"/>
                         <outlet property="SportPicker" destination="WRW-6Q-PbY" id="El1-QD-ElF"/>
+                        <outlet property="teamName" destination="Tab-r2-JWB" id="8Y6-7s-qdW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="908" y="133.5832083958021"/>
         </scene>
-        <!--Player Table View Controller-->
+        <!--Title-->
         <scene sceneID="P8q-bx-buu">
             <objects>
                 <tableViewController id="YR2-U5-0tW" customClass="PlayerTableViewController" customModule="StatMe" customModuleProvider="target" sceneMemberID="viewController">
@@ -126,6 +119,7 @@
                             <outlet property="delegate" destination="YR2-U5-0tW" id="FJz-wU-mBt"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Title" id="kG9-pu-FD7"/>
                     <connections>
                         <segue destination="l5H-Nr-bqA" kind="show" id="NlJ-Cn-oyP"/>
                     </connections>

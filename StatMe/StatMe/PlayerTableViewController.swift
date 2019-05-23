@@ -9,7 +9,7 @@
 import UIKit
 
 class PlayerTableViewController: UITableViewController {
-    var players = [Player(name: "Chad Scott Jr", number:2, shotsmade:14, shotsattempted:18), Player(name: "Ben Uzzell", number: 10, shotsmade: 12, shotsattempted: 17), Player(name: "Cheick Toure", number: 5, shotsmade: 16, shotsattempted: 24), Player(name: "Brian Chisolm", number: 12, shotsmade: 5, shotsattempted: 8), Player(name: "Christian McDaniel", number:35, shotsmade: 13, shotsattempted: 19) ]
+    var players = [Player(name: "Chad Scott Jr", number:2, position:"G", shotsmade:14, shotsattempted:18), Player(name: "Ben Uzzell", number: 10, position:"G", shotsmade: 12, shotsattempted: 17), Player(name: "Cheick Toure", number: 5, position:"G", shotsmade: 16, shotsattempted: 24), Player(name: "Brian Chisolm", number: 12, position:"G", shotsmade: 5, shotsattempted: 8), Player(name: "Christian McDaniel", number:35, position:"G", shotsmade: 13, shotsattempted: 19) ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,6 +40,7 @@ class PlayerTableViewController: UITableViewController {
         // Configure the cell...
         
         cell.textLabel?.text = players[indexPath.row].name
+        cell.detailTextLabel?.text = "G"
         return cell
     }
     

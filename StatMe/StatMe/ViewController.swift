@@ -11,6 +11,7 @@ import UIKit
 class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate{
     @IBOutlet weak var SportLabel: UILabel!
     @IBOutlet weak var SportPicker: UIPickerView!
+    @IBOutlet weak var teamName: UITextField!
     
     let sports = ["Football", "Basketball", "Baseball", "Soccer"]
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -30,7 +31,9 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
-
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        segue.destination.navigationItem.title = teamName.text
+    }
 
 }
 

@@ -8,9 +8,11 @@
 
 import Foundation
 import UIKit
+let DocumentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
 
-struct Player {
+struct Player:Codable {
     var name: String
+    var position: String 
     var number: Int
     var shotsmade: Int
     var shotsattempted: Int
